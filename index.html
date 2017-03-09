@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta charset="utf-8" lang="pl">
+        <style>
+        #result {
+    margin: 10px;
+    background: #eee;
+    padding: 10px;
+    
+    overflow: auto;
+}
+            fieldset{
+                width:100%;
+                padding: 15;
+            }
+            
+            #awaria{
+                text-align: center;
+                padding: 15;
+                background-color: lightcoral;
+            }
+            #awaryjne{
+                padding:25;
+                background-color: aquamarine;
+            }
+        </style>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+ <script src="graph.js"></script>
+       
+      <center><h1>STRAŻ POŻARNA</h1>  </center><div id="content">
+<button id="dodaj_miasto">Dodaj miasto</button>
+<button id="dodaj_droge">Dodaj droge</button>
+      
+<form id="myForm" >
+     
+    <fieldset name="miasta">
+
+            <label>Nazwa Miasta </label>
+
+            <input name="nazwa" value=""  type="text" placeholder="np. Ciechocinek"/>
+
+            <label>Czy posiada jednostkę straży pożarnej? </label>
+            <select name="ma_jednostke">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+            </select>
+    </fieldset>
+    
+    <fieldset name="miasta">
+
+            <label>Nazwa Miasta </label>
+
+            <input name="nazwa" value=""  type="text" placeholder="np. Ciechocinek"/>
+
+            <label>Czy posiada jednostkę straży pożarnej? </label>
+            <select name="ma_jednostke">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+            </select>
+    </fieldset>
+    
+    <fieldset name="miasta">
+
+            <label>Nazwa Miasta </label>
+
+            <input name="nazwa"  type="text" value="" placeholder="np. Ciechocinek"/>
+
+             <label>Czy posiada jednostkę straży pożarnej? </label><select name="ma_jednostke">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+            </select>
+            </fieldset>
+ 
+      
+</form>
+        <form id="myForm2" >
+    
+    <fieldset name="drogi">
+
+            <label>Droga łącząca </label>
+
+            <input name="miasta" type="text" value="" placeholder="np. Ciechocinek"/><label> z </label>
+            <input name="miasta" value="" placeholder="np. Jastarnia"/>
+
+            <label>Czas przejazdu </label>
+            <input name="czas_przejazdu" type="number" value="" placeholder="liczba dodatnia"/>
+    </fieldset>
+            
+             <fieldset name="drogi">
+
+            <label>Droga łącząca </label>
+
+            <input name="miasta" type="text" value="" placeholder="np. Ciechocinek"/><label> z </label>
+            <input name="miasta" value="" placeholder="np. Jastarnia"/>
+
+            <label>Czas przejazdu </label>
+            <input name="czas_przejazdu" type="number" value="" placeholder="liczba dodatnia"/>
+    </fieldset>
+    
+ 
+      
+</form>
+        <form id="niewazne">
+        <label>Maksymalny czas przejazdu </label>
+            <input name="max_czas_przejazdu" type="number" value="" placeholder="liczba dodatnia"/>
+            <input type="submit" value="ZAKOŃCZ WPROWADZANIE DANYCH">
+        </form>
+        
+
+</div>        
+        <div id="awaria">
+       <h2> GDZIE ZDAŻYŁA SIĘ AWARIA?</h2>
+            <div id="butony">
+            </div>
+        </div>
+        <center><button id="removex">RESETUJ</button></center>  <div id="schow">
+<h2><center>WYNIK</center></h2>
+<pre id="result">
+</pre>
+        
+    
+        </div>
+    </body>
+</html>
